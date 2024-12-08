@@ -2,9 +2,9 @@
 {% block title %}FAIRMicrobiome | Privacy processing{% endblock %}
 {% block content %}
 <br>
-<h1>Updated P29-Score</h1>
+<h1>Updated P<sub>29</sub> Score</h1>
 <div class="alert alert-success" role="alert">
-   Privacy processing succeeded! The updated P29-Score is displayed below.
+   Privacy processing succeeded! The updated P<sub>29</sub> Score is displayed below.
 </div>
 <div id="p29result" data-p29result="{{ p29result }}"></div>
 <div id="minlresult" data-minl-result="{{ minlresult }}"></div>
@@ -13,7 +13,7 @@
 <div class="row mt-3">
    <div class="col-md-4 mb-3">
       <div class="card" style="background-color: #F2EDE2;">
-         <h5 class="card-header">P29-Score
+         <h5 class="card-header">P<sub>29</sub> Score
             <a  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="GDPR-compliant privacy metric.">
             <i class="fa fa-info-circle info-icon" aria-hidden="true" style="color: #1E5B5E;"></i>
             </a>
@@ -54,7 +54,7 @@
    </div>
    <div class="col-md-4 mb-3">
       <div class="card" style="background-color: #F2EDE2;">
-         <h5 class="card-header">Minimum l Value
+         <h5 class="card-header">Minimum l-value
             <a  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="The minimal diversity of a sensitive attribute's values within an equivalence class (EC).">
             <i class="fa fa-info-circle info-icon" aria-hidden="true" style="color: #1E5B5E;"></i>
             </a>
@@ -95,7 +95,7 @@
    </div>
    <div class="col-md-4 mb-3">
       <div class="card" style="background-color: #F2EDE2;">
-         <h5 class="card-header">Maximum t Value
+         <h5 class="card-header">Maximum t-value
             <a  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="The maximum distance between the distribution of a sensitive attribute's value within an equivalence class (EC) and the distribution of the same attribute across the entire dataset.">
             <i class="fa fa-info-circle info-icon" aria-hidden="true" style="color: #1E5B5E;"></i>
             </a>
@@ -138,7 +138,7 @@
 <div class="row mt-3">
    <div class="col-md-4 mb-3">
       <div class="card" style="background-color: #F2EDE2;">
-         <h5 class="card-header">Minimum k Value
+         <h5 class="card-header">Minimum k-value
             <a  data-bs-toggle="tooltip" data-bs-placement="bottom"  data-bs-title="Each individual in the dataset remains indistinguishable from at least k−1 others within the same equivalence class (EC).">
             <i class="fa fa-info-circle info-icon" aria-hidden="true" style="color: #1E5B5E;"></i>
             </a>
@@ -172,7 +172,7 @@
             </a>
             <br>
             <div id="reasonsCollapse" class="collapse">
-               <p>When the P_29 score equals zero, it signifies one of the unacceptable privacy risks within the dataset:</p>
+               <p>When the P<sub>29</sub> Score score equals zero, it signifies one of the unacceptable privacy risks within the dataset:</p>
                <ol>
                   <li>Singling out risks: This refers to the potential to isolate specific records that identify an individual within the dataset.</li>
                   <li>Linkability risks: This pertains to the capability to link two or more records related to the same data subject or a group of data subjects, either within the same database or across different databases.</li>
@@ -206,15 +206,15 @@
       </a>
       <br>
       <div id="problemsCollapse" class="collapse">
-         <p>A minimum k value of 1 suggests the risk of singling out one specific individual within that equivalence class (EC). <br>
-            A minimum l value of 0 suggests the disclosure of specific values of sensitive attributes for the individual within that EC. <br>
-            A maximum t value greater than 0.5 indicates a severe risk of inferring specific values of sensitive attributes for the individual within that EC.
+         <p>A minimum k-value of 1 suggests the risk of singling out one specific individual within that equivalence class (EC). <br>
+            A minimum l-value of 0 suggests the disclosure of specific values of sensitive attributes for the individual within that EC. <br>
+            A maximum t-value greater than 0.5 indicates a severe risk of inferring specific values of sensitive attributes for the individual within that EC.
          </p>
       </div>
    </div>
 </div>
 <div class="alert alert-info d-flex justify-content-between align-items-center" style="margin-top: 1%;" role="alert">
-   <p>The dataset has a P29 value higher than 0.0, which means that it can be further processed in the differential privacy module. Press continue to initiate this proces. </p>
+   <p>The dataset has a P<sub>29</sub> Score higher than 0.0, which means that it can be further processed in the differential privacy module. Press continue to initiate this proces. </p>
    <a type="button" class="btn btn-primary-custom" href="\differential_privacy">Continue</a>
 </div>
 {% endblock %}
