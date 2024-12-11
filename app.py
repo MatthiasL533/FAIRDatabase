@@ -93,6 +93,15 @@ def dashboard():
     else:
         return redirect('/')
 
+@app.route('/profile')
+def profile():
+    if 'user' in session:
+        user_email = session['email']
+        return render_template('profile.html', user_email=user_email,current_path=request.path)
+    else:
+        return redirect('/')
+
+
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if 'user' in session:
